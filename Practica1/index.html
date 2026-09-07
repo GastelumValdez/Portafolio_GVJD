@@ -73,6 +73,62 @@
     <!-- cierre de la sección "skills" -->
     </section>
   <!-- cierre de main -->
+   <h2>Contacto</h2>
+<!-- form sin action ni method: todavía no hay servidor que reciba estos datos -->
+<form>
+  <!-- div: agrupa la etiqueta y el campo de "Nombre" -->
+  <div>
+    <!-- for="nombre" debe ser IGUAL al id del input de abajo: así se vinculan -->
+    <label for="nombre">Nombre</label>
+    <!-- type="text": campo de texto simple -->
+    <input
+      type="text"
+      <!-- id: debe coincidir con el for del label de arriba -->
+      id="nombre"
+      <!-- name: el nombre del dato, lo usaría un backend si existiera -->
+      name="nombre"
+      <!-- required: el navegador no deja enviar el formulario si este campo está vacío -->
+      required
+      <!-- minlength: exige al menos 2 caracteres -->
+      minlength="2"
+      <!-- placeholder: texto de ejemplo que desaparece al escribir, no reemplaza al label -->
+      placeholder="Tu nombre">
+  <!-- cierre del div de "Nombre" -->
+  </div>
+
+  <!-- div: agrupa la etiqueta y el campo de "Correo" -->
+  <div>
+    <label for="correo">Correo</label>
+    <!-- type="email": el navegador exige el formato usuario@dominio antes de dejar enviar -->
+    <input
+      type="email"
+      id="correo"
+      name="correo"
+      required
+      placeholder="tu@correo.com">
+  <!-- cierre del div de "Correo" -->
+  </div>
+
+  <!-- div: agrupa la etiqueta y el campo de "Mensaje" -->
+  <div>
+    <label for="mensaje">Mensaje</label>
+    <!-- textarea: campo de texto de varias líneas, sin atributo "type" -->
+    <textarea
+      id="mensaje"
+      name="mensaje"
+      required
+      <-- entre 10 y 500 caracteres -->
+      minlength="10"
+      maxlength="500"
+      <!-- rows: cuántas líneas de alto se ven sin hacer scroll -->
+      rows="4"></textarea>
+  <!-- cierre del div de "Mensaje" -->
+  </div>
+
+  <!-- button type="submit": dispara el envío y activa la validación de todos los campos de arriba -->
+  <button type="submit">Enviar</button>
+<!-- cierre del form -->
+</form>
   </main>
 
   <!-- footer con id="contacto": acá aterriza el tercer enlace; va una sola vez, al final -->
